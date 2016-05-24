@@ -8,11 +8,14 @@ install lz4 安装出现了 error: Unable to find vcvarsall.bat这样的错误�
 在Ubuntu15.04中自带的有Python2.7，所以直接装了lz4模块，也不需要vc环境了。
 下面就是直接写程序了
 在官方文档中又lz4的使用方式
->>> import lz4
->>> compressed_data = lz4.dumps(data)
->>> data == lz4.loads(compressed_data)
-True
->>>
+> import lz4
+
+> compressed_data = lz4.dumps(data)
+
+> data == lz4.loads(compressed_data)
+
+> True
+
 
 在程序设计中难点不是解压、压缩文件这两个部分，是对命令行传进来的参数处理上的问题。
 我直接使用的是##sys这个模块中的sys.argv[]这个属性，
